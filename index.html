@@ -1,78 +1,118 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
-    <link rel="stylesheet" href="style/style.css" />
-    <title>Frontend Mentor | E-commerce product page</title>
-
-    <style></style>
+    <title>Product Page</title>
+    <link rel="stylesheet" href="./style/style.css" />
+    <link rel="stylesheet" href="./style/global.css" />
   </head>
   <body>
-    <header class="header">
-      <img
-        src="images/icon-menu.svg"
-        alt="Hamburguer menu"
-        class="header_hamburguer-menu"
-      />
+    <div class="content_wrapper">
+      <header class="header">
+        <div class="header_left">
+          <p class="header_logo">sneakers</p>
+          <nav>
+            <ul class="header_list">
+              <li class="header_list_item">Collections</li>
+              <li class="header_list_item">Men</li>
+              <li class="header_list_item">Women</li>
+              <li class="header_list_item">About</li>
+              <li class="header_list_item">Contact</li>
+            </ul>
+          </nav>
+        </div>
+        <div class="header_right">
+          <div class="header_cart-container">
+            <img
+              src="./images/icon-cart.svg"
+              alt="Icon cart"
+              class="cart_icon-header"
+            />
+            <span class="header_product-counter">1</span>
+          </div>
+          <img
+            src="./images/image-avatar.png"
+            alt="User Avatar"
+            class="user_avatar-header"
+          />
+        </div>
+      </header>
 
-      <img src="images/logo.svg" alt="Sneakers logo" class="img_logo" />
-
-      <nav class="header_nav header_side-menu">
-        <ul class="header_list">
-          <li>Collections</li>
-          <li>Men</li>
-          <li>Women</li>
-          <li>About</li>
-          <li>Contact</li>
-        </ul>
-      </nav>
-      <div class="header_user-interaction">
-        <img
-          src="images/icon-cart.svg"
-          alt="cart icon"
-          class="header_cart-icon"
-        />
-        <img
-          src="images/image-avatar.png"
-          alt="profile picture"
-          class="header_user-profile"
-        />
-      </div>
-    </header>
-
-    <section class="product_section">
-      <img src="images/image-product-1-thumbnail.jpg" alt="product 1" />
-      <img src="images/image-product-2-thumbnail.jpg" alt="product 1" />
-      <img src="images/image-product-3-thumbnail.jpg" alt="product 1" />
-      <img src="images/image-product-4-thumbnail.jpg" alt="product 1" />
-
-      <div class="product_image-gallery">
-        <button
-          class="product_image-gallery-button product_image-gallery--previous"
-        >
-          <img src="images/icon-previous.svg" alt="Previous image" />
-        </button>
-        <button
-          class="product_image-gallery-button product_image-gallery--next"
-        >
-          <img src="images/icon-next.svg" alt="Next image" />
-        </button>
-      </div>
-    </section>
-
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="https://github.com/">Philippe Dias</a>.
+      <main class="main">
+        <div class="product_images">
+          <img
+            src="./images/image-product-1.jpg"
+            alt="Product image"
+            class="product_image-main"
+          />
+          <div class="product_images-carrousel">
+            <img
+              src="./images/image-product-1-thumbnail.jpg"
+              alt="Product image"
+              class="carrousel_img"
+            />
+            <img
+              src="./images/image-product-2-thumbnail.jpg"
+              alt="Product image"
+              class="carrousel_img"
+            />
+            <img
+              src="./images/image-product-3-thumbnail.jpg"
+              alt="Product image"
+              class="carrousel_img"
+            />
+            <img
+              src="./images/image-product-4-thumbnail.jpg"
+              alt="Product image"
+              class="carrousel_img"
+            />
+          </div>
+        </div>
+        <div class="product_info">
+          <h1 class="product_name">Fall Limited Edition Sneakers</h1>
+          <p class="product_description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
+            eligendi eius modi, odio ratione pariatur doloremque quod aliquid
+            non voluptatum tenetur eveniet! Consequatur tenetur deserunt ad
+            maxime illo modi quod quaerat eaque tempore obcaecati ipsum, dicta
+            quisquam possimus facere et repudiandae. Deserunt recusandae nam
+            ipsum animi vitae ea ratione impedit consequuntur aliquam atque ab
+            consectetur, possimus quidem eaque, sed unde.
+          </p>
+          <div class="product_price">
+            <div>
+              <span class="product_price-sale">$125,00</span>
+              <span class="product_price-discount">50%</span>
+            </div>
+            <span class="product_price-old">$250,00</span>
+            <!-- <span class="product_price-actuall">$250,00</span> -->
+          </div>
+          <div>
+            <span class="quantity_counter"
+              ><button class="decrease_quantity">
+                <img
+                  src="./images/icon-minus.svg"
+                  alt="Decrease quantity"
+                  class="quantity_counter-icon"
+                />
+              </button>
+              0
+              <button class="decrease_quantity">
+                <img
+                  src="./images/icon-plus.svg"
+                  alt="Increase quantity"
+                  class="quantity_counter-icon"
+                />
+              </button>
+            </span>
+            <button class="btn-orange">
+              <img src="./images/icon-cart.svg" alt="Icon cart" />
+              Adicionar ao carrinho
+            </button>
+          </div>
+        </div>
+      </main>
     </div>
   </body>
 </html>

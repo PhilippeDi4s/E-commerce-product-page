@@ -1,0 +1,28 @@
+:root {
+  --orange: hsl(26, 100%, 55%);
+  --pale-orange: hsl(25, 100%, 94%);
+
+  --blue-900: hsl(220, 13%, 13%);
+  --blue-700: hsl(219, 9%, 45%);
+  --blue-600: hsl(220, 14%, 75%);
+  --blue-400: hsl(223, 64%, 98%);
+
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%);
+
+  /* - Black (with 75% opacity for lightbox background): hsl(0, 0%, 0%) */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
