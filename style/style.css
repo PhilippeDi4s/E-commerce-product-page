@@ -1,0 +1,123 @@
+body {
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+.show-sm {
+  display: block;
+}
+.show-lg {
+  display: none;
+}
+
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  border: 0;
+  white-space: nowrap;
+}
+
+/*================= CONTENT WRAPPER =================*/
+.content_wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+/*================= HEADER =================*/
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.header_left,
+.header_right {
+  display: flex;
+  gap: 1rem;
+}
+
+.header_left {
+  position: relative;
+}
+
+.header_hamburguer-menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav_header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  transform: translateX(-100%);
+  padding: 2rem 2rem;
+  width: 60%;
+  min-height: 100vh;
+  z-index: 1;
+  background-color: var(--blue-400);
+  transition: all 0.5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.content_wrapper:has(#hamburguer_menu:checked) {
+  backdrop-filter: blur(10px);
+}
+
+#hamburguer_menu:checked ~ .nav_header {
+  transform: translateX(0);
+}
+
+.content_wrapper:has(#close_hamburguer_menu:checked) {
+  backdrop-filter: blur(0);
+}
+
+#close_hamburguer_menu:checked:checked ~ .nav_header {
+  transform: translateX(-100%);
+}
+
+.header_list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.header_logo{
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.header_cart-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+/*================= FOOTER =================*/
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 43.75rem) {
+  /* .show-sm {
+    display: none;
+  }
+  .show-lg {
+    display: block;
+  } */
+}

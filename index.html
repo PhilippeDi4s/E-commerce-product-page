@@ -4,15 +4,47 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Product Page</title>
-    <link rel="stylesheet" href="./style/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght,YOPQ@100..900,300&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./style/global.css" />
+    <link rel="stylesheet" href="./style/style.css" />
   </head>
   <body>
     <div class="content_wrapper">
       <header class="header">
         <div class="header_left">
+          <input
+            class="hamburguer_input hidden"
+            id="hamburguer_menu"
+            type="radio"
+            name="toggle_header_menu"
+          />
+          <label class="header_hamburguer-menu show-sm" for="hamburguer_menu">
+            <img
+              src="./images/icon-menu.svg"
+              alt="Menu"
+              class="header_hamburguer-icon"
+            />
+          </label>
           <p class="header_logo">sneakers</p>
-          <nav>
+          <nav class="nav_header">
+            <input
+              class="hamburguer_input hidden"
+              id="close_hamburguer_menu"
+              type="radio"
+              name="toggle_header_menu"
+            />
+            <label class="header_hamburguer-menu show-sm" for="close_hamburguer_menu">
+              <img
+                src="./images/icon-close.svg"
+                alt="Fechar menu"
+                class="header_close-icon"
+              />
+            </label>
             <ul class="header_list">
               <li class="header_list_item">Collections</li>
               <li class="header_list_item">Men</li>
@@ -46,7 +78,7 @@
             alt="Product image"
             class="product_image-main"
           />
-          <div class="product_images-carrousel">
+          <div class="product_images-carrousel show-lg">
             <img
               src="./images/image-product-1-thumbnail.jpg"
               alt="Product image"
@@ -115,4 +147,5 @@
       </main>
     </div>
   </body>
+  <script src="./script/script.js"></script>
 </html>
