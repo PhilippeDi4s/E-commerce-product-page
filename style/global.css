@@ -13,10 +13,23 @@
   /* - Black (with 75% opacity for lightbox background): hsl(0, 0%, 0%) */
 }
 
+*{
+  /* outline: 1px dashed orange; */
+}
+
 *,
 *:after,
 *:before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+*:focus {
+  outline-color: var(--orange);
+  backdrop-filter: brightness(93%);
+}
+
+img{
+  max-width: 100%;
 }
