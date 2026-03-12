@@ -39,6 +39,8 @@ body {
   align-items: center;
   padding: 1rem;
   position: sticky;
+  top: 0;
+  left: 0;
 
   .icon {
     min-width: 1rem;
@@ -172,6 +174,121 @@ body {
 .user_avatar-header {
   width: 30%;
   min-width: 1.9rem;
+}
+
+/*================= MAIN PRODUCT IMAGE =================*/
+.product_main_image {
+  position: relative;
+}
+
+.product_main_image-arrows {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 0;
+  padding: 0 1rem;
+
+  .icon {
+    background-color: var(--white);
+    padding: 0.5rem 0.7rem;
+    border-radius: 50%;
+  }
+}
+/*================= PRODUCT INFO =================*/
+.product_info {
+  padding: 1rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mudar_depois {
+  text-transform: uppercase;
+  color: var(--blue-700);
+  letter-spacing: 2px;
+  font-weight: bolder;
+  font-size: 0.8rem;
+}
+
+.product_description {
+  color: var(--blue-700);
+  letter-spacing: 1.2px;
+  font-size: 0.9rem;
+  line-height: 1.4rem;
+}
+
+/*================= PRODUCT PRICE =================*/
+.product_price {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.product_price_left {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.product_price-sale {
+  font-weight: bolder;
+  font-size: 1.2rem;
+}
+
+.product_price-discount {
+  background-color: var(--black);
+  padding: 0.2rem 0.5rem;
+  color: var(--white);
+  font-size: 0.8rem;
+  border-radius: 4px;
+}
+
+.product_price-old {
+  color: var(--blue-700);
+  text-decoration: line-through;
+}
+
+/*================= ADD TO CART =================*/
+.mudar_depois_2{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.quantity_counter{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: var(--blue-500);
+  border-radius: 8px;
+}
+
+.quantity_counter-button{
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.btn-orange{
+  background-color: var(--orange);
+  color: var(--black);
+  display: flex;
+  gap: .5rem;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border: none;
+  padding: 1rem;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.icon_cart{
+  width: 5%;
 }
 /*================= FOOTER =================*/
 .attribution {
