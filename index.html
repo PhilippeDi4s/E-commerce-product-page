@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
@@ -79,15 +79,47 @@
       </header>
 
       <main class="main">
+        <div class="cart_modal-wrapper">
+          <article class="cart_modal">
+            <h3>Cart</h3>
+            <span class="line"></span>
+            <div class="cart_products_list">
+              <img
+                src="./images/image-product-1-thumbnail.jpg"
+                alt="Fall Limited Edition Sneakers"
+                class="cart_product-image"
+              />
+              <div class="cart_product-info">
+                <span class="brighter-text">Fall Limited Edition Sneakers</span>
+                <div class="cart_product-price">
+                  <span class="brighter-text">$125.00</span>
+                  <span class="brighter-text">x 3</span>
+                  <span class="cart_product-total">$375.00</span>
+                </div>
+              </div>
+              <img
+                src="./images/icon-delete.svg"
+                alt="Deletar Pedido"
+                class="trash_icon icon"
+              />
+            </div>
+            <button class="btn-orange">Checkout</button>
+          </article>
+        </div>
         <div class="product_images">
           <div class="product_main_image">
-            <img
-              src="./images/image-product-1.jpg"
-              alt="Product image"
-            />
+            <img src="./images/image-product-1.jpg" alt="Product image" />
             <div class="product_main_image-arrows">
-              <img src="./images/icon-previous.svg" alt="Imagem antererior" class="icon">
-              <img src="./images/icon-next.svg" alt="Próxima imagem" class="icon">
+              <img
+                src="./images/icon-previous.svg"
+                alt="Imagem antererior"
+                class="icon"
+              />
+              <img
+                src="./images/icon-next.svg"
+                alt="Próxima imagem"
+                class="icon"
+              />
             </div>
           </div>
           <div class="product_images-carrousel show-lg">
@@ -116,7 +148,7 @@
         <div class="product_info">
           <span class="mudar_depois">sneaker company</span>
           <h1 class="product_name">Fall Limited Edition Sneakers</h1>
-          <p class="product_description">
+          <p class="brighter-text product_description">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
             eligendi eius modi, odio ratione pariatur doloremque quod aliquid
             non voluptatum tenetur eveniet! Consequatur tenetur deserunt ad
@@ -152,7 +184,11 @@
               </button>
             </span>
             <button class="btn-orange">
-              <img src="./images/icon-cart.svg" alt="Icon cart" class="icon_cart "/>
+              <img
+                src="./images/icon-cart.svg"
+                alt="Icon cart"
+                class="icon_cart"
+              />
               Adicionar ao carrinho
             </button>
           </div>
