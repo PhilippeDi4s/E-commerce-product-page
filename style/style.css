@@ -224,9 +224,8 @@ body {
 }
 
 .cart_products_list{
-  margin-top: 1.5rem;
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   align-items: center;
   justify-content: space-evenly;
   gap: 1rem;
@@ -234,8 +233,19 @@ body {
 }
 
 .cart_product-image{
-  width: 4.4rem;
+  width: 12%;
+  min-width: 2.8rem;
   border-radius: 5px;
+}
+
+.cart_product-total{
+  font-weight: bold;
+}
+
+.cart_message{
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 5rem 0;
 }
 
 /*================= MAIN PRODUCT IMAGE =================*/
