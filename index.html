@@ -14,27 +14,24 @@
     <link rel="stylesheet" href="./style/style.css" />
   </head>
   <body id="begining">
-      <header class="header">
-        <div class="header_left">
-          <input
-            class="hamburguer_input hidden"
-            id="hamburguer_menu"
-            type="radio"
-            name="toggle_header_menu"
+    <header class="header">
+      <div class="header_left">
+        <input
+          class="hamburguer_input hidden"
+          id="hamburguer_menu"
+          type="radio"
+          name="toggle_header_menu"
+        />
+        <label class="header_hamburguer-menu show-sm" for="hamburguer_menu">
+          <img
+            src="./images/icon-menu.svg"
+            alt="Menu"
+            class="header_hamburguer-icon icon"
           />
-          <label
-            class="header_hamburguer-menu show-sm"
-            for="hamburguer_menu"
-            tabindex="0"
-          >
-            <img
-              src="./images/icon-menu.svg"
-              alt="Menu"
-              class="header_hamburguer-icon icon"
-            />
-          </label>
-          <h1 class="header_logo"><a href="#begining">sneakers</a></h1>
-          <nav class="nav_header">
+        </label>
+        <h1 class="header_logo"><a href="#begining">sneakers</a></h1>
+        <div class="header_menu-wrapper">
+          <div class="header_menu">
             <input
               class="hamburguer_input hidden"
               id="close_hamburguer_menu"
@@ -51,153 +48,162 @@
                 class="header_close-icon icon"
               />
             </label>
-            <ul class="header_list">
-              <li class="header_list_item"><a href="#">Collections</a></li>
-              <li class="header_list_item"><a href="#">Men</a></li>
-              <li class="header_list_item"><a href="#">Women</a></li>
-              <li class="header_list_item"><a href="#">About</a></li>
-              <li class="header_list_item"><a href="#">Contact</a></li>
-            </ul>
-          </nav>
+            <nav class="nav_header">
+              <ul class="header_list">
+                <li class="header_list_item"><a href="#">Collections</a></li>
+                <li class="header_list_item"><a href="#">Men</a></li>
+                <li class="header_list_item"><a href="#">Women</a></li>
+                <li class="header_list_item"><a href="#">About</a></li>
+                <li class="header_list_item"><a href="#">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
         </div>
-        <div class="header_right">
-          <div class="header_cart-container">
+      </div>
+      <div class="header_right">
+        <div class="header_cart-container">
+          <input class="hidden" id="open-cart_modal" type="checkbox" />
+          <label class="header_cart" for="open-cart_modal">
             <img
               src="./images/icon-cart.svg"
               alt="Icon cart"
               class="cart_icon-header icon"
             />
-            <span class="header_product-counter">1</span>
-          </div>
-          <img
-            src="./images/image-avatar.png"
-            alt="User Avatar"
-            class="user_avatar-header"
-          />
+          </label>
+          <span class="header_product-counter">1</span>
         </div>
-      </header>
+        <img
+          src="./images/image-avatar.png"
+          alt="User Avatar"
+          class="user_avatar-header"
+        />
+      </div>
+    </header>
 
-      <div class="cart_modal-wrapper">
-        <dialog class="cart_modal">
-          <h3>Cart</h3>
-          <span class="line"></span>
-          <div class="cart_products_list">
+    <div class="cart_modal">
+      <h3>Cart</h3>
+      <span class="line"></span>
+      <div class="cart_products_list">
+        <img
+          src="./images/image-product-1-thumbnail.jpg"
+          alt="Fall Limited Edition Sneakers"
+          class="cart_product-image"
+        />
+        <div class="cart_product-info">
+          <span class="brighter-text">Fall Limited Edition Sneakers</span>
+          <div class="cart_product-price">
+            <span class="brighter-text">$125.00</span>
+            <span class="brighter-text">x 3</span>
+            <span class="cart_product-total">$375.00</span>
+          </div>
+        </div>
+        <img
+          src="./images/icon-delete.svg"
+          alt="Deletar Pedido"
+          class="trash_icon icon"
+        />
+      </div>
+      <!-- <span class="brighter-text cart_message">Your cart is empty</span> -->
+      <span class="line"></span>
+      <button class="btn-orange">Checkout</button>
+    </div>
+    <main class="main">
+      <div class="product_images-container">
+        <div class="product_images">
+          <div class="product_main_image-container">
+            <img
+              src="./images/image-product-1.jpg"
+              alt="Product image"
+              class="product_main_image-image"
+            />
+            <div class="product_main_image-arrows show-sm">
+              <img
+                src="./images/icon-previous.svg"
+                alt="Imagem antererior"
+                class="icon"
+              />
+              <img
+                src="./images/icon-next.svg"
+                alt="Próxima imagem"
+                class="icon"
+              />
+            </div>
+          </div>
+          <div class="product_images-carrousel show-lg">
             <img
               src="./images/image-product-1-thumbnail.jpg"
-              alt="Fall Limited Edition Sneakers"
-              class="cart_product-image"
+              alt="Product image"
+              class="carrousel_img"
             />
-            <div class="cart_product-info">
-              <span class="brighter-text">Fall Limited Edition Sneakers</span>
-              <div class="cart_product-price">
-                <span class="brighter-text">$125.00</span>
-                <span class="brighter-text">x 3</span>
-                <span class="cart_product-total">$375.00</span>
-              </div>
-            </div>
             <img
-              src="./images/icon-delete.svg"
-              alt="Deletar Pedido"
-              class="trash_icon icon"
+              src="./images/image-product-2-thumbnail.jpg"
+              alt="Product image"
+              class="carrousel_img"
             />
-            <!-- <span class="brighter-text cart_message">Your cart is empty</span> -->
+            <img
+              src="./images/image-product-3-thumbnail.jpg"
+              alt="Product image"
+              class="carrousel_img"
+            />
+            <img
+              src="./images/image-product-4-thumbnail.jpg"
+              alt="Product image"
+              class="carrousel_img"
+            />
           </div>
-          <button class="btn-orange">Checkout</button>
-        </article>
+        </div>
       </div>
-      <main class="main">
-        <div class="product_images-container">
-          <div class="product_images">
-            <div class="product_main_image-container">
-              <img src="./images/image-product-1.jpg" alt="Product image" class="product_main_image-image"/>
-              <div class="product_main_image-arrows show-sm">
-                <img
-                  src="./images/icon-previous.svg"
-                  alt="Imagem antererior"
-                  class="icon"
-                />
-                <img
-                  src="./images/icon-next.svg"
-                  alt="Próxima imagem"
-                  class="icon"
-                />
-              </div>
+      <div class="product_info-container">
+        <div class="product_info">
+          <span class="product_company">sneaker company</span>
+          <h1 class="product_name">Fall Limited Edition Sneakers</h1>
+          <p class="brighter-text product_description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
+            eligendi eius modi, odio ratione pariatur doloremque quod aliquid
+            non voluptatum tenetur eveniet! Consequatur tenetur deserunt ad
+            maxime illo modi quod quaerat eaque tempore obcaecati ipsum, dicta
+            quisquam possimus facere et repudiandae. Deserunt recusandae nam
+            ipsum animi vitae ea ratione impedit consequuntur aliquam atque ab
+            consectetur, possimus quidem eaque, sed unde.
+          </p>
+          <div class="product_price">
+            <div class="product_price_left">
+              <span class="product_price-sale">$125,00</span>
+              <span class="product_price-discount">50%</span>
             </div>
-            <div class="product_images-carrousel show-lg">
-              <img
-                src="./images/image-product-1-thumbnail.jpg"
-                alt="Product image"
-                class="carrousel_img"
-              />
-              <img
-                src="./images/image-product-2-thumbnail.jpg"
-                alt="Product image"
-                class="carrousel_img"
-              />
-              <img
-                src="./images/image-product-3-thumbnail.jpg"
-                alt="Product image"
-                class="carrousel_img"
-              />
-              <img
-                src="./images/image-product-4-thumbnail.jpg"
-                alt="Product image"
-                class="carrousel_img"
-              />
-            </div>
+            <span class="product_price-old">$250,00</span>
+            <!-- <span class="product_price-actuall">$250,00</span> -->
           </div>
-        </div>
-        <div class="product_info-container">
-          <div class="product_info">
-            <span class="product_company">sneaker company</span>
-            <h1 class="product_name">Fall Limited Edition Sneakers</h1>
-            <p class="brighter-text product_description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
-              eligendi eius modi, odio ratione pariatur doloremque quod aliquid
-              non voluptatum tenetur eveniet! Consequatur tenetur deserunt ad
-              maxime illo modi quod quaerat eaque tempore obcaecati ipsum, dicta
-              quisquam possimus facere et repudiandae. Deserunt recusandae nam
-              ipsum animi vitae ea ratione impedit consequuntur aliquam atque ab
-              consectetur, possimus quidem eaque, sed unde.
-            </p>
-            <div class="product_price">
-              <div class="product_price_left">
-                <span class="product_price-sale">$125,00</span>
-                <span class="product_price-discount">50%</span>
-              </div>
-              <span class="product_price-old">$250,00</span>
-              <!-- <span class="product_price-actuall">$250,00</span> -->
-            </div>
-            <div class="purchase_actions">
-              <fieldset class="quantity_counter-container">
-                <button class="quantity_counter-button">
-                  <img
-                    src="./images/icon-minus.svg"
-                    alt="Decrease quantity"
-                    class="quantity_counter-icon"
-                  />
-                </button>
-                  <span class="quantity_counter">0</span>
-                <button class="quantity_counter-button">
-                  <img
-                    src="./images/icon-plus.svg"
-                    alt="Increase quantity"
-                    class="quantity_counter-icon"
-                  />
-                </button>
-              </fieldset>
-              <button class="btn-orange">
+          <div class="purchase_actions">
+            <fieldset class="quantity_counter-container">
+              <button class="quantity_counter-button">
                 <img
-                  src="./images/icon-cart.svg"
-                  alt="Icon cart"
-                  class="icon_cart"
+                  src="./images/icon-minus.svg"
+                  alt="Decrease quantity"
+                  class="quantity_counter-icon"
                 />
-                Adicionar ao carrinho
               </button>
-            </div>
+              <span class="quantity_counter">0</span>
+              <button class="quantity_counter-button">
+                <img
+                  src="./images/icon-plus.svg"
+                  alt="Increase quantity"
+                  class="quantity_counter-icon"
+                />
+              </button>
+            </fieldset>
+            <button class="btn-orange">
+              <img
+                src="./images/icon-cart.svg"
+                alt="Icon cart"
+                class="icon_cart"
+              />
+              Adicionar ao carrinho
+            </button>
           </div>
         </div>
-      </main>
+      </div>
+    </main>
   </body>
   <script src="./script/script.js"></script>
 </html>

@@ -14,7 +14,7 @@
   /* - Black (with 75% opacity for lightbox background): hsl(0, 0%, 0%) */
 }
 
-*{
+* {
   /* outline: 1px dashed orange; */
 }
 
@@ -24,13 +24,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+  &:focus-visible {
+    outline: 2px solid var(--orange);
+    backdrop-filter: brightness(95%);
+  }
 }
 
-*:focus {
-  outline-color: var(--orange);
-  backdrop-filter: brightness(93%);
-}
-
-img{
+img {
   max-width: 100%;
 }
