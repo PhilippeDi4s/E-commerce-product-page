@@ -32,23 +32,27 @@ body {
   text-transform: uppercase;
 }
 
+button {
+  cursor: pointer;
+  white-space: nowrap;
+  border: none;
+  background-color: transparent;
+}
+
 .btn-orange {
   background-color: var(--orange);
   color: var(--black);
   display: flex;
-  gap: clamp(0.5rem, 4vw, 1.3rem);
   align-items: center;
   justify-content: center;
+  gap: clamp(0.5rem, 4vw, 1.3rem);
   width: 100%;
-  border: none;
   padding: 1rem;
   border-radius: 6px;
   font-weight: 600;
   margin: 0 auto;
-  cursor: pointer;
   font-size: clamp(0.8rem, 4vw, 1rem);
   transition: all 0.3s ease-in-out;
-  white-space: nowrap;
 
   &:hover {
     filter: brightness(1.1);
@@ -59,8 +63,8 @@ body {
 .header {
   display: flex;
   justify-content: space-between;
-  gap: 1rem;
   align-items: center;
+  gap: 1rem;
   padding: 1rem;
   position: sticky;
   top: 0;
@@ -76,6 +80,7 @@ body {
 .header_right {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 1rem;
 }
 
@@ -110,7 +115,7 @@ body {
   transform: translateX(-100%);
 }
 
-.nav_header{
+.nav_header {
   margin-top: 2rem;
 }
 
@@ -124,7 +129,6 @@ body {
 
 .header_list_item {
   padding: 0.5rem;
-  border-bottom: 1px solid transparent;
   font-weight: bold;
   font-size: 1.3rem;
 
@@ -187,11 +191,14 @@ body {
 }
 
 .cart_icon-header {
-  width: clamp(1.5rem, 3vw, 2rem);
+  width: 2rem;
 }
 
 .user_avatar-header {
-  width: clamp(2.3rem, 10vw, 3rem);
+  width: 3rem;
+  img {
+    border-radius: 50%;
+  }
 }
 
 /*================= CART MODAL =================*/
@@ -218,12 +225,13 @@ body {
   background-color: var(--white);
   border-radius: 12px;
   padding: 1.5rem 1rem;
+  box-shadow: 0px 4px 18px 1px rgba(0, 0, 0, 0.47);
 }
 
 .line {
   height: 0.1rem;
   width: 100%;
-  background-color: var(--blue-600);
+  background-color: var(--blue-400);
 }
 
 .cart_products_list {
@@ -249,8 +257,6 @@ body {
   font-weight: bold;
   margin: 5rem 0;
 }
-
-/*================= MAIN SECTION =================*/
 
 /*================= MAIN PRODUCT IMAGE =================*/
 .product_main_image-container {
@@ -371,7 +377,7 @@ body {
   color: hsl(228, 45%, 44%);
 }
 
-@media screen and (min-width: 56.25rem) {
+@media screen and (min-width: 60rem) {
   .show-sm {
     display: none;
   }
@@ -380,14 +386,103 @@ body {
   }
 
   .header {
-    margin-bottom: 5rem;
+    margin-bottom: 8rem;
+    height: 10rem;
+    align-items: start;
+    padding-bottom: 0;
+    padding-top: 4rem;
+    box-shadow: 0px 9px 6px -2px rgba(0, 0, 0, 0.1);
+  }
+
+  .header_left {
+    gap: clamp(1.5rem, 3vw,3rem);
+    height: 100%;
+    align-items: start;
+  }
+
+  .header_right {
+    align-items: start;
+  }
+
+  .header_logo {
+    font-size: 3rem;
+    line-height: 0.4;
+  }
+
+  .header_menu-wrapper {
+    opacity: 1;
+    pointer-events: all;
+    position: static;
+    left: initial;
+    top: initial;
+    width: 100%;
+    min-height: 0;
+    height: 100%;
+    background-color: transparent;
+  }
+
+  .header_menu {
+    padding: 0;
+    width: auto;
+    max-width: none;
+    min-height: auto;
+    background-color: transparent;
+    transform: translateX(0);
+    height: 100%;
+  }
+
+  .nav_header {
+    margin-top: 0;
+    height: 100%;
+  }
+
+  .header_list {
+    flex-direction: row;
+    align-items: start;
+    gap: clamp(1rem, 4vw, 3rem);
+    height: 100%;
+  }
+
+  .header_list_item {
+    padding: 0;
+    font-weight: normal;
+    opacity: 70%;
+    height: 100%;
+    transition: opacity 0.3s ease-in-out;
+
+    &:hover {
+      border-bottom: 2px solid var(--orange);
+      opacity: 100%;
+    }
+  }
+
+  .cart_icon-header {
+    min-width: 2rem;
+    width: 2rem;
+    flex-shrink: 0;
+  }
+
+  .user_avatar-header {
+    width: 3rem;
+    min-width: 3rem;
+    margin-top: -0.5rem;
+  }
+
+  .user_avatar-header:hover {
+    img {
+      outline: 2px solid var(--orange);
+    }
   }
 
   .cart_modal {
-    top: 5rem;
+    top: 10.5rem;
     left: 90%;
     transform: translateX(-80%);
     width: 25rem;
+
+    .icon:hover {
+      opacity: 1;
+    }
   }
 
   .main {
@@ -423,6 +518,22 @@ body {
     justify-content: center;
     gap: 2rem;
 
+    button {
+      outline: none;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    button:focus-visible {
+      opacity: 60%;
+      img {
+        outline: 3px solid var(--orange);
+      }
+    }
+
+    button:hover {
+      opacity: 60%;
+    }
+
     img {
       border-radius: 15px;
     }
@@ -439,7 +550,6 @@ body {
   .product_info {
     height: 100%;
     justify-content: center;
-    /* width: 70%; */
   }
 
   .product_company {
@@ -463,5 +573,13 @@ body {
 
   .quantity_counter-container {
     width: 60%;
+  }
+
+  .quantity_counter-icon {
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .quantity_counter-icon:hover {
+    opacity: 60%;
   }
 }

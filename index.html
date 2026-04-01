@@ -17,7 +17,7 @@
     <header class="header">
       <div class="header_left">
         <input
-          class="hamburguer_input hidden"
+          class="hamburguer_input hidden show-sm"
           id="hamburguer_menu"
           type="radio"
           name="toggle_header_menu"
@@ -36,11 +36,11 @@
               class="hamburguer_input hidden"
               id="close_hamburguer_menu"
               type="radio"
-              name="toggle_header_menu"
+              name="toggle_header_menu show-sm"
             />
             <label
               class="header_hamburguer-menu show-sm"
-              for="close_hamburguer_menu"
+              for="close_hamburguer_menu show-sm"
             >
               <img
                 src="./images/icon-close.svg"
@@ -72,11 +72,9 @@
           </label>
           <span class="header_product-counter">1</span>
         </div>
-        <img
-          src="./images/image-avatar.png"
-          alt="User Avatar"
-          class="user_avatar-header"
-        />
+        <button class="user_avatar-header">
+          <img src="./images/image-avatar.png" alt="User Avatar" />
+        </button>
       </div>
     </header>
 
@@ -130,26 +128,35 @@
             </div>
           </div>
           <div class="product_images-carrousel show-lg">
-            <img
-              src="./images/image-product-1-thumbnail.jpg"
-              alt="Product image"
-              class="carrousel_img"
-            />
-            <img
-              src="./images/image-product-2-thumbnail.jpg"
-              alt="Product image"
-              class="carrousel_img"
-            />
-            <img
-              src="./images/image-product-3-thumbnail.jpg"
-              alt="Product image"
-              class="carrousel_img"
-            />
-            <img
-              src="./images/image-product-4-thumbnail.jpg"
-              alt="Product image"
-              class="carrousel_img"
-            />
+            <button>
+              <img
+                src="./images/image-product-1-thumbnail.jpg"
+                alt="Product image"
+                class="carrousel_img"
+              />
+            </button>
+            <button>
+              <img
+                src="./images/image-product-2-thumbnail.jpg"
+                alt="Product image"
+                class="carrousel_img"
+              />
+            </button>
+
+            <button>
+              <img
+                src="./images/image-product-3-thumbnail.jpg"
+                alt="Product image"
+                class="carrousel_img"
+              />
+            </button>
+            <button>
+              <img
+                src="./images/image-product-4-thumbnail.jpg"
+                alt="Product image"
+                class="carrousel_img"
+              />
+            </button>
           </div>
         </div>
       </div>
