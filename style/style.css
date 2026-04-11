@@ -178,6 +178,21 @@ button {
   justify-content: center;
 }
 
+.header_cart {
+  cursor: pointer;
+  color: #69707d;
+  transition: color 0.3s ease-in-out;
+
+  &:hover {
+    color: black;
+  }
+}
+
+.header_cart > svg {
+  width: 10%;
+  height: auto;
+}
+
 .header_product-counter {
   color: var(--pale-orange);
   background-color: var(--orange);
@@ -188,10 +203,6 @@ button {
   top: auto;
   transform: translate(12px, -11px);
   font-size: 0.8rem;
-}
-
-.cart_icon-header {
-  width: 2rem;
 }
 
 .user_avatar-header {
@@ -395,7 +406,7 @@ button {
   }
 
   .header_left {
-    gap: clamp(1.5rem, 3vw,3rem);
+    gap: clamp(1.5rem, 3vw, 3rem);
     height: 100%;
     align-items: start;
   }
@@ -449,6 +460,10 @@ button {
     opacity: 70%;
     height: 100%;
     transition: opacity 0.3s ease-in-out;
+
+    a {
+      height: 100%;
+    }
 
     &:hover {
       border-bottom: 2px solid var(--orange);
