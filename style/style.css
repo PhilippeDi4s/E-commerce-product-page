@@ -37,6 +37,8 @@ button {
   white-space: nowrap;
   border: none;
   background-color: transparent;
+  padding: 0;
+  margin: 0;
 }
 
 .btn-orange {
@@ -272,82 +274,26 @@ button {
 /*================= MAIN PRODUCT IMAGE =================*/
 .product_images-container {
   display: flex;
-  overflow: hidden;
+  flex-direction: column;
+  gap: 2rem;
 }
 
-.carousel_img_wrapper {
+.product_main_image{
   position: relative;
-  width: 100%;
-}
-
-.product_main_image-image {
-  min-width: 100vw;
-}
-
-.carousel_arrows {
-  position: absolute;
-  display: flex;
-  top: 50%;
-  width: 100%;
-  padding: 0 1rem;
-
-  .icon {
-    background-color: var(--white);
-    padding: 0.5rem 0.7rem;
-    border-radius: 50%;
-  }
-}
-
-.right_arrow{
-  margin-left: auto;
-}
-
-.left_arrow{
-  margin-right: auto;
-}
-
-#image1{
-  transform: translateX(100%);
-}
-#image2{
-  transform: translateX(100%);
-}
-#image3{
-  transform: translateX(100%);
-}
-
-.product_images-container:has(#slide2:checked)  #image1{
-  transform: translateX(100%);
-}
-
-.product_images-container:has(#slide2:checked)  #image2{
-  transform: translateX(-100%);
-}
-
-.product_images-container:has(#slide3:checked)  #image2{
-  transform: translateX(100%);
-}
-.product_images-container:has(#slide3:checked)  #image3{
-  transform: translateX(-200%);
-}
-
-.product_images-container:has(#slide1:checked)  #image1{
-  transform: translateX(0);
 }
 
 .product_main_image-image {
   object-fit: cover;
-  max-height: 37.5rem;
+  max-height: 33.5rem;
   width: 100%;
 }
 
-/* .product_main_image-arrows {
+.product_main_image-arrows {
   width: 100%;
   display: flex;
   justify-content: space-between;
   position: absolute;
   top: 50%;
-  left: 0;
   padding: 0 1rem;
 
   .icon {
@@ -355,7 +301,15 @@ button {
     padding: 0.5rem 0.7rem;
     border-radius: 50%;
   }
-} */
+}
+
+#next_arrow{
+  margin-left: auto;
+}
+
+#previous_arrow{
+  margin-right: auto;
+}
 /*================= PRODUCT INFO =================*/
 .product_info {
   padding: 1rem 1.5rem;
@@ -458,7 +412,7 @@ button {
   }
 
   .header {
-    margin-bottom: 8rem;
+    margin-bottom: 5rem;
     height: 10rem;
     align-items: start;
     padding-bottom: 0;
@@ -569,7 +523,6 @@ button {
   }
 
   .product_images-container {
-    display: flex;
     justify-content: end;
   }
 

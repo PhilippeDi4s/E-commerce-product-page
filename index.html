@@ -108,171 +108,65 @@
       <button class="btn-orange">Checkout</button>
     </div>
     <main class="main">
-
       <div class="product_images-container">
-        <div class="carousel_img_wrapper" id="image1">
+        <div class="product_main_image">
           <img
             src="./images/image-product-1.jpg"
             alt="Product image"
             class="product_main_image-image"
+            id="main_product_image"
           />
-          <div class="carousel_arrows">
-            <input
-              class="hidden"
-              type="radio"
-              name="carousel_arrow"
-              id="slide2"
-            />
-            <label class="right_arrow" for="slide2">
-              <img
-                src="./images/icon-next.svg"
-                alt="Próxima imagem"
-                class="icon"
-              />
-            </label>
-          </div>
-        </div>
 
-        <div class="carousel_img_wrapper" id="image2">
-          <img
-            src="./images/image-product-2.jpg"
-            alt="Product image"
-            class="product_main_image-image"
-          />
-          <div class="carousel_arrows">
-            <input
-              class="hidden"
-              type="radio"
-              name="carousel_arrow"
-              id="slide3"
-            />
-            <label class="right_arrow" for="slide3">
-              <img
-                src="./images/icon-next.svg"
-                alt="Próxima imagem"
-                class="icon"
-              />
-            </label>
-          </div>
-        </div>
-
-        <div class="carousel_img_wrapper" id="image3">
-          <img
-            src="./images/image-product-3.jpg"
-            alt="Product image"
-            class="product_main_image-image"
-          />
-          <div class="carousel_arrows">
-            <input class="hidden" type="radio" name="carousel_arrow" id="slide1" checked/>
-            <label class="right_arrow" for="slide1">
-              <img
-                src="./images/icon-next.svg"
-                alt="Próxima imagem"
-                class="icon"
-              />
-            </label>
-            <!-- <input type="radio" name="carousel_arrow" id="slide2" />
-            <label for="slide1">
-              <img
-                src="./images/icon-next.svg"
-                alt="Próxima imagem"
-                class="icon"
-              />
-            </label> -->
-          </div>
-        </div>
-
-        <!--
-        <div class="carousel_img_wrapper">
-          <img
-            src="./images/image-product-4.jpg"
-            alt="Product image"
-            class="product_main_image-image"
-          />
-          <div class="carousel_arrows">
-            <input type="radio" name="carousel_arrow" id="slide1" />
-            <label for="slide1">
+          <div class="product_main_image-arrows show-sm">
+            <button id="previous_arrow">
               <img
                 src="./images/icon-previous.svg"
                 alt="Imagem antererior"
                 class="icon"
               />
-            </label>
-            <input type="radio" name="carousel_arrow" id="slide2" />
-            <label for="slide1">
+            </button>
+            <button id="next_arrow">
               <img
                 src="./images/icon-next.svg"
                 alt="Próxima imagem"
                 class="icon"
               />
-            </label>
+            </button>
           </div>
-        </div> -->
+        </div>
 
-        <!-- <img
-              src="./images/image-product-1.jpg"
-              alt="Product image"
-              class="product_main_image-image"
-            />
+        <div class="product_images-carousel show-lg">
+          <button>
             <img
-              src="./images/image-product-2.jpg"
+              src="./images/image-product-1-thumbnail.jpg"
               alt="Product image"
-              class="product_main_image-image"
+              class="carousel_img"
             />
-            <img
-              src="./images/image-product-3.jpg"
-              alt="Product image"
-              class="product_main_image-image"
-            />
-            <img
-              src="./images/image-product-4.jpg"
-              alt="Product image"
-              class="product_main_image-image"
-            />
+          </button>
 
-            <div class="product_main_image-arrows show-sm">
-              <img
-                src="./images/icon-previous.svg"
-                alt="Imagem antererior"
-                class="icon"
-              />
-              <img
-                src="./images/icon-next.svg"
-                alt="Próxima imagem"
-                class="icon"
-              />
-            </div> -->
-        <!-- <div class="product_images-carousel show-lg">
-            <button>
-              <img
-                src="./images/image-product-1-thumbnail.jpg"
-                alt="Product image"
-                class="carousel_img"
-              />
-            </button>
-            <button>
-              <img
-                src="./images/image-product-2-thumbnail.jpg"
-                alt="Product image"
-                class="carousel_img"
-              />
-            </button>
+          <button>
+            <img
+              src="./images/image-product-2-thumbnail.jpg"
+              alt="Product image"
+              class="carousel_img"
+            />
+          </button>
 
-            <button>
-              <img
-                src="./images/image-product-3-thumbnail.jpg"
-                alt="Product image"
-                class="carousel_img"
-              />
-            </button>
-            <button>
-              <img
-                src="./images/image-product-4-thumbnail.jpg"
-                alt="Product image"
-                class="carousel_img"
-              />
-            </button>
-          </div> -->
+          <button>
+            <img
+              src="./images/image-product-3-thumbnail.jpg"
+              alt="Product image"
+              class="carousel_img"
+            />
+          </button>
+          <button>
+            <img
+              src="./images/image-product-4-thumbnail.jpg"
+              alt="Product image"
+              class="carousel_img"
+            />
+          </button>
+        </div>
       </div>
       <div class="product_info-container">
         <div class="product_info">
